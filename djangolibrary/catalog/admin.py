@@ -19,7 +19,6 @@ class AuthorAdmin(admin.ModelAdmin):
     inlines = [BooksInLine]
 
 
-# Register the admin class with the associated model
 admin.site.register(Author, AuthorAdmin)
 
 
