@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block title %} <h1 style="margin-left: 10em">Django Library</h1> {% endblock %}
+
+{% block content %}
+<h1>Django Library Home</h1>
+
+  <p>Welcome to <em>DjangoLibrary</em>, a very basic Django website based on tutorial.</p>
+
+<h2>Dynamic content</h2>
+
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Genres:</strong> {{ num_genres }}</li>
+    <li><strong>Books that have 'song' in title:</strong> {{ num_books_w_song }}</li>
+  </ul>
+
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+{% endblock %}
